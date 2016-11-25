@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="WpfExample.Dialogs.DialogQuestion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="179.165" d:DesignWidth="343.748">
+    <Grid Margin="10" Width="320" Height="150">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Message" FontSize="18" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid  Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnNao" IsCancel="True" HorizontalAlignment="Center" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="Não" Grid.Column="1" Margin="0" VerticalAlignment="Center" Width="100">
+                <Button.CommandParameter>
+                    <system:Boolean>false</system:Boolean>
+                </Button.CommandParameter>
+            </Button>
+            <Button x:Name="btnSim" IsDefault="True" HorizontalAlignment="Center"
+            	Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="Sim" Grid.Column="0" Margin="0" VerticalAlignment="Center" Width="100">
+                <Button.CommandParameter>
+                    <system:Boolean>true</system:Boolean>
+                </Button.CommandParameter>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
