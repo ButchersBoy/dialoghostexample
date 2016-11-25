@@ -23,7 +23,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnOk" HorizontalAlignment="Center"
-            	Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="OK" Grid.Column="0" Margin="0" VerticalAlignment="Center" Width="100" IsCancel="True">
+            	Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="OK" Grid.Column="0" Margin="0" VerticalAlignment="Center" Width="100" IsDefault="True">
                 <Button.CommandParameter>
                     <system:Boolean>false</system:Boolean>
                 </Button.CommandParameter>

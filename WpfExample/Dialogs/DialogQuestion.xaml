@@ -23,13 +23,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnNao" IsCancel="True" HorizontalAlignment="Center" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="Não" Grid.Column="1" Margin="0" VerticalAlignment="Center" Width="100">
+            <Button x:Name="btnNao" IsCancel="True" HorizontalAlignment="Center" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="No" Grid.Column="1" Margin="0" VerticalAlignment="Center" Width="100">
                 <Button.CommandParameter>
                     <system:Boolean>false</system:Boolean>
                 </Button.CommandParameter>
             </Button>
             <Button x:Name="btnSim" IsDefault="True" HorizontalAlignment="Center"
-            	Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="Sim" Grid.Column="0" Margin="0" VerticalAlignment="Center" Width="100">
+            	Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="Yes" Grid.Column="0" Margin="0" VerticalAlignment="Center" Width="100">
                 <Button.CommandParameter>
                     <system:Boolean>true</system:Boolean>
                 </Button.CommandParameter>
